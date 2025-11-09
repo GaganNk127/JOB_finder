@@ -49,6 +49,11 @@ export default function App() {
           <JobCard key={index} job={job} />
         ))}
       </div>
+      <footer>
+      <p className="mt-12 text-gray-500 text-sm">
+        &copy; 2025 Gagan Naik. All rights reserved.
+      </p>
+      </footer>
     </div>
   );
 }
