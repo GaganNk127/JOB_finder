@@ -6,9 +6,9 @@ export default function App() {
   const [jobs, setJobs] = useState([]);
   const [loading, setLoading] = useState(false);
 
-  const fetchJobs = async ({ education, location }) => {
+  const fetchJobs = async ({ education, location, entrylevel="fresher" }) => {
     setLoading(true);
-    const query = `${education} jobs in ${location}`;
+    const query = `${education} jobs in ${location} and ${entrylevel}`;
     const url = `https://jsearch.p.rapidapi.com/search?query=${encodeURIComponent(
       query
     )}&page=1&num_pages=1&country=us&date_posted=all`;
